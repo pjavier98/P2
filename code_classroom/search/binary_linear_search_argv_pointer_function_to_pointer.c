@@ -107,13 +107,40 @@ int main(int argc, char const *argv[])
 
 	else if(strcmp(argv[1], "linear") == 0)
 	{
+		printf("Linear search:\n");
 		search(linear_search, array, size, element, 0);
 	}
 
 	else if(strcmp(argv[1], "binary") == 0)
 	{
+		printf("Binary search:\n");
 		search(binary_search, array, size, element, 0);
 	}
+
+	/*if (strcmp(argv[2], "compare") == 0)
+	{
+		printf("Linear search:\n");
+		search(linear_search, array, size, element, 0);
+
+		printf("Binary search:\n");
+		search(binary_search, array, size, element, 0);
+	}
+
+	else if(strcmp(argv[2], "linear") == 0)
+	{
+		printf("Linear search:\n");
+		search(linear_search, array, size, element, 0);
+	}
+
+	else if(strcmp(argv[2], "binary") == 0)
+	{
+		printf("Binary search:\n");
+		search(binary_search, array, size, element, 0);
+	}*/
+
+	/*argv[x] x -> o x é a string apos o executavel, o argc conta quantos elementos tem apos o executavel
+
+	argv -> pega o/s argumento/s apos o executavel*/
 
 	return 0;
 }
