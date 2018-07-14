@@ -13,54 +13,52 @@ void troca(int *a, int *b)
 	}
 }
 
-void comparar(int quant, int *array, int i, int j)
+void comparar(int size, int *array, int i, int j)
 {
-	//int k;
-
 	if (i == 0)
 	{
 	    return;
 	}
 
-	if (j < quant)
+	if (j < size)
 	{
 		if (array[j] > array[j + 1])
 		{
 			troca(&array[j], &array[j + 1]); // array crescente
 		}
 
-		return comparar(quant, array, i, j + 1);
+		return comparar(size, array, i, j + 1);
 	}
 
-	/*for (k = 0; k < quant; k += 1) // para ver como vai se dando a ordenação
+	/*for (int k = 0; k < size; k += 1) // para ver como vai se dando a ordenação
 	{							   // sempre ficando menos um a cada loop
 		printf("%d ", array[k]);
 	}
 
 	printf("\n");*/
 
-	comparar(quant, array, i - 1, 0);
+	comparar(size, array, i - 1, 0);
 }
 
 int main()
 {
-	int quantidade, i;
+	int size, i;
 
 	printf("Digite o tamanho do array:\n");
-	scanf("%d", &quantidade);
+	scanf("%d", &size);
 
-	int *array = malloc(quantidade * sizeof(int));
+	int *array = malloc(size * sizeof(int));
 
-	printf("Digite os elementos do array(total = %d)\n", quantidade);
+	printf("Digite os elementos do array(total = %d)\n", size);
 
-	for (i = 0; i < quantidade; i += 1)
+	for (i = 0; i < size; i += 1)
 	{
 		scanf("%d", &array[i]);
 	}
 
-	comparar(quantidade, array, quantidade - 1, 0);
+	comparar(size, array, size - 1, 0);
     
-    for (i = 0; i < quantidade; i += 1)
+    for (i = 0; i < size; i += 1)
 	{
 		printf("%d ", array[i]);
 	}
