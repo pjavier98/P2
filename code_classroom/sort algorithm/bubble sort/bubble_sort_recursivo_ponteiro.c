@@ -15,24 +15,31 @@ void troca(int *a, int *b)
 
 void comparar(int quant, int *array, int i, int j)
 {
-	if (quant == i)
+	//int k;
+
+	if (i == 0)
 	{
 	    return;
 	}
 
 	if (j < quant)
 	{
-		if (array[i] > array[j])
+		if (array[j] > array[j + 1])
 		{
-			troca(&array[i], &array[j]); // array crescente
+			troca(&array[j], &array[j + 1]); // array crescente
 		}
 
-		comparar(quant, array, i, j + 1);
-		
-		return;
+		return comparar(quant, array, i, j + 1);
 	}
 
-	comparar(quant, array, i + 1, j = i + 1);
+	/*for (k = 0; k < quant; k += 1) // para ver como vai se dando a ordenação
+	{							   // sempre ficando menos um a cada loop
+		printf("%d ", array[k]);
+	}
+
+	printf("\n");*/
+
+	comparar(quant, array, i - 1, 0);
 }
 
 int main()
@@ -51,7 +58,7 @@ int main()
 		scanf("%d", &array[i]);
 	}
 
-	comparar(quantidade, array, 0, 1);
+	comparar(quantidade, array, quantidade - 1, 0);
     
     for (i = 0; i < quantidade; i += 1)
 	{

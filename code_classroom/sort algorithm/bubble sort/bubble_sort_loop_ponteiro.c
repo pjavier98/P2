@@ -3,20 +3,26 @@
 
 void comparar(int quant, int *array)
 {	
-	int i, j, temp;
+	int i, j, temp, k;
 	
-	for (i = 0; i < quant; i += 1)
+	for (i = quant - 1; i >= 0; i -= 1)
 	{
-		
-		for (j = i + 1; j < quant; j += 1)
+		for (j = 0; j < i; j += 1)
 		{
-			if (array[i] > array[j]) // array crescente
+			if (array[j] > array[j + 1]) // array crescente
 			{
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
+				temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
 			}
 		}
+
+		/*for (k = 0; k < quant; k += 1) // para ver como vai se dando a ordenação
+		{								 // sempre ficando menos um a cada loop
+			printf("%d ", array[k]);
+		}
+
+		printf("\n");*/
 	}
 }
 
@@ -37,8 +43,8 @@ int main()
 	}
 
 	comparar(quantidade, array);
-    
-    for (i = 0; i < quantidade; i += 1)
+
+	for (i = 0; i < quantidade; i += 1)
 	{
 		printf("%d ", array[i]);
 	}
