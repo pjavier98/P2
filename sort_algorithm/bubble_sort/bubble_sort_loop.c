@@ -16,13 +16,6 @@ void comparar(int size, int *array)
 				array[j + 1] = temp;
 			}
 		}
-
-		/*for (k = 0; k < size; k += 1) // para ver como vai se dando a ordenação
-		{								 // sempre ficando menos um a cada loop
-			printf("%d ", array[k]);
-		}
-
-		printf("\n");*/
 	}
 }
 
@@ -30,13 +23,10 @@ int main()
 {
 	int size, i;
 
-	printf("Digite o tamanho do array:\n");
 	scanf("%d", &size);
 
 	int *array = malloc(size * sizeof(int));
 
-	printf("Digite os elementos do array(total = %d)\n", size);
-	
 	for (i = 0; i < size; i += 1)
 	{
 		scanf("%d", &array[i]);
