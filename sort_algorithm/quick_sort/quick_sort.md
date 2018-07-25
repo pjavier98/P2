@@ -2,7 +2,7 @@
 
 ## Explicação sobre o Quick Sort:
 
-### Passos para fazer o quick sort:
+### Passos para fazer o Quick Sort:
 
 1. Enquanto o inicio for menor ou igual ao fim:
 

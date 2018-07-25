@@ -1,26 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertion(int *array, int size, int i, int j, int temp)
+void insertion(int *array, int size)
 {
-	if (i == size) 
-	{
-		return;
-	}
-	
-	while ((j >= 0) && (array[j] > temp)) 
-	{
-		array[j + 1] = array[j]; 
+	int i, j, atual;
 
-		j -= 1;					
-	}							
-	
-	if (j != i - 1) 
+	for (i = 1; i < size; i++) 
 	{
-		array[j + 1] = temp;
-	}
+		atual = array[i];
+		
+		for (j = i - 1; (j >= 0) && (atual < array[j]); j--)
+		{
+			array[j + 1] = array[j];
+		}
 
-	insertion(array, size, i + 1, i, array[i + 1]); 
+		array[j+1] = atual;
+	}
 }
 
 int main()
@@ -36,7 +31,7 @@ int main()
 		scanf("%d", &array[i]);
 	}
 
-	insertion(array, size, 1, 0, array[1]);
+	insertion(array, size);
 
 	for (i = 0; i < size; i += 1)
 	{

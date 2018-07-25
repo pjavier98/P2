@@ -2,7 +2,7 @@
 
 ## Explicação sobre o Selection Sort:
 
-### Passos para fazer o selection sort:
+### Passos para fazer o Selection Sort:
 
 1. Uma variável pega o menor valor e salva nela.
 

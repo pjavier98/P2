@@ -2,7 +2,7 @@
 
 ## Explicação sobre o Merge Sort:
 
-### Passos para fazer o merge sort:
+### Passos para fazer o Merge Sort:
 
 1. Dividir o array em sub-arrays até chegar em um array de tamanho 1, como este é um array unitário, está ordenado.
 
