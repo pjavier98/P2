@@ -1,3 +1,3 @@
 ## Explicação sobre o Merge Sort:
 
-[gif do merge](merge_sort.gif)
+![gif do merge](gif/merge_sort.gif)
