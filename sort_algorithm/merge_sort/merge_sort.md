@@ -24,5 +24,6 @@
 
 - **Senão** -> colocar os valores do começo da segunda metade no array auxiliar.
 
+### Big O -> O(n * log n)
 
 ![gif do merge](gif/merge_sort.gif)
