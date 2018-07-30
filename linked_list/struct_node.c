@@ -3,29 +3,29 @@
 
 struct node
 {
-    int valor;          // valor que a lista ira guardar
+    int value;          // value que a lista ira guardar
     struct node *proximo; // lista que ele aponta 
 };
 
 int main()
 {
-    struct node *primeiro_node = (struct node*) malloc(sizeof(struct node));
-    // podemos colocar uma condição para o segundo_node
-    struct node *segundo_node = (struct node*) malloc(sizeof(struct node));
+    struct node *first_node = (struct node*) malloc(sizeof(struct node));
+    // podemos colocar uma condição para o second_node
+    struct node *second_node = (struct node*) malloc(sizeof(struct node));
     /*casting -> coloca o tipo de dado que o ponteiro vai receber, converta o 
     tamanho que eu preciso na struct node formato de ponteiros de node e coloque
-    dentro do ponteiro -> primeiro_node*/
+    dentro do ponteiro -> first_node*/
     
-    primeiro_node -> valor = 3; // para acessar um membro de uma struct, utilizar operador ->
-    segundo_node -> valor = 7;
+    first_node -> value = 3; // para acessar um membro de uma struct, utilizar operador ->
+    second_node -> value = 7;
 
-    /*como indicar que o segundo_ node vem depois do primeiro_ node*//*mediante o ponteiro *proximo*/
+    /*como indicar que o second_ node vem depois do first_ node*//*mediante o ponteiro *proximo*/
 
-    primeiro_node -> proximo = segundo_node;
-    /*o proximo elemento do primeiro_node é o segundo_node*/
+    first_node -> proximo = second_node;
+    /*o proximo elemento do first_node é o second_node*/
 
-    printf("%d\n", primeiro_node->valor);
-    printf("%d\n", primeiro_node->proximo->valor);
+    printf("%d\n", first_node -> value);
+    printf("%d\n", first_node -> proximo -> value);
 
     system("pause");
 

@@ -24,3 +24,43 @@ Possui uma variável que guarda o valor do elemento que estamos querendo guardar
 Eles possuem **endereços na memória RAM**(endereços lógicos).
 
 Cada **lista encadeada** tem o seu **final**, e é sinalizado pelo último nó da lista que possui o **ponteiro próximo apontando** para **NULL**(não existe mais nenhum nó la na frente, aponta para vazio)
+
+### Inserir a direita:
+
+Achar o ultimo nó e substituir por outro que veria agora a ser o ultimo.
+
+### Inserir a esquerda:
+
+Achar o primeiro nó e ele não vai ser mais o primeiro.
+
+- Em ambos os casos tem que **atualizar a referência do ponteiro.**
+
+## Operações com lista
+
+1. Criar listas (devolve uma referência para nossa lista onde alocamos o espaço).
+
+2. Push (inserir um node no inicio da nossa lista com dados).
+
+3. Pop (pegar e remover o primeiro node da lista).
+
+4. Insert (inserir um node em uma parte específica).
+
+5. Erase (apagar um indice [node] especifico).
+
+6. isEmpty (verifica se a lista esta vazia).
+
+7. IndexOf (verifica se o node está ou não na lista).
+
+8. atPosition (se passar um indice negativo ou maior que o tamanho da lista retorna um ponteiro nulo).
+
+9. Minimum (retornar o menor elemento da lista).
+
+10. Maximum (retornar o maior elemento da lista).
+
+11. Exchange (trocar a posição de dois nodes da lista).
+
+12. Sort (ordenar a nossa lista).
+
+13.  Print (imprimir a lista).
+
+- Em **todas** tem que passar **referência da lista.**

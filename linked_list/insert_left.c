@@ -7,14 +7,24 @@ struct node
     struct node *proximo;
 };
 
-void listar (struct node *aux)
+void list(struct node *aux)
 {
     while (aux != NULL)
     {
         printf("%d\n", aux -> value);
-    
+
         aux = aux -> proximo;
     }   
+}
+
+struct node* insert_left(struct node *list, int x)
+{
+    struct node *new_node = (struct node*) malloc(sizeof(struct node)); // new_node -> novo inicio da lista
+
+    new_node -> value = x;
+    new_node -> proximo = list; // o proximo vai ser a propria lista
+
+    return new_node;
 }
 
 int main()
@@ -36,19 +46,10 @@ int main()
     fourth_node -> value = 9;
     fourth_node -> proximo = NULL;
 
-    listar(first_node); // funcao ou na main
+    first_node = insert_left(first_node, 100); // atualizar o primeiro node, ja que ele ja possui um valor
+    first_node = insert_left(first_node, 107); // coloque o valor antes do valor da funcao acima
     
-    // lista encadeada com 4 elementos 
-
-    /*struct node *aux = first_node; // tem o mesmo endereço, apontam para o mesmo lugar
-    
-    while (aux != NULL) // condição de parada
-    {
-        printf("%d\n", aux -> value);
-    
-        aux = aux -> proximo; // o auxiliar vai passar a apontar com o endereço de memória do ponteiro proximo
-        // aux passa a apontar para o proximo de aux   
-    }*/   
+    list(first_node); // funcao ou na main
 
     return 0;
 }
