@@ -64,3 +64,8 @@ int main()
 
     return 0;
 }
+
+/*typedef struct name()
+{...}name;
+*/
+
