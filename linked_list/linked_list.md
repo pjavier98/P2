@@ -37,17 +37,17 @@ Achar o primeiro nó e ele não vai ser mais o primeiro.
 
 ## Operações com lista
 
-1. Criar listas (devolve uma referência para nossa lista onde alocamos o espaço).
+1. Criar listas (devolve uma referência para nossa lista onde alocamos o espaço). -> struct node !!!
 
-2. Push (inserir um node no inicio da nossa lista com dados).
+2. Push (inserir um node no inicio da nossa lista com dados). -> funcao insert_begin !!!
 
-3. Pop (pegar e remover o primeiro node da lista).
+3. Pop (pegar e remover o primeiro node da lista). -> funcao erase !!!
 
-4. Insert (inserir um node em uma parte específica).
+4. Insert (inserir um node em uma parte específica). -> inserção ordenada
 
-5. Erase (apagar um indice [node] especifico).
+5. Erase (apagar um indice [node] especifico). -> funcao erase !!!
 
-6. isEmpty (verifica se a lista esta vazia).
+6. isEmpty (verifica se a lista esta vazia). -> funcao isempty !!!
 
 7. IndexOf (verifica se o node está ou não na lista).
 
@@ -61,6 +61,18 @@ Achar o primeiro nó e ele não vai ser mais o primeiro.
 
 12. Sort (ordenar a nossa lista).
 
-13.  Print (imprimir a lista).
+13.  Print (imprimir a lista). -> funcao print !!!
 
 - Em **todas** tem que passar **referência da lista.**
+- !!! -> ja fiz.
+
+### Para tirar as structs dos nodes:
+```
+
+typedef struct node
+{
+	int value;
+	struct node *next;
+} node;
+
+```

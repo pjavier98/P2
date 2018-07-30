@@ -17,12 +17,42 @@ void print(node *head)
     }   
 }
 
-node* insert_end(node *head, int item) 
+node* erase(node *head, int item)
+{
+    node *previous = NULL;      // anterior
+    node *current = head; // atual
+
+    while (current != NULL && current -> value != item)
+    {
+        previous = current;
+        current = current -> next;
+    }
+
+    if (current == NULL)
+    {
+        return head;
+    }
+
+    if (previous == NULL)
+    {
+        head = current -> next;
+    }
+
+    else
+    {
+        previous -> next = current -> next;
+    }
+
+    free(current);
+    return head;
+}
+
+node* insert_end(node *head, int x) 
 {
     node *head = head;
     node *new_node = (node*) malloc(sizeof(node)); 
 
-    new_node -> value = item;
+    new_node -> value = x;
     new_node -> next = NULL;
 
     if (head != NULL)
@@ -43,27 +73,31 @@ node* insert_end(node *head, int item)
 
 }
 
-node* insert_begin(node *head, int item)
+node* insert_begin(node *head, int x)
 {
     node *new_node = (node*) malloc(sizeof(node)); 
 
-    new_node -> value = item;
+    new_node -> value = x;
     new_node -> next = head; 
     return new_node;
 }
 
-node *linked_list()
+int isempty()
 {
-    return NULL;
-} 
+    return (head == NULL);
+}
 
 int main()
 {
-    node *head = linked_list();
+    node *head = isempty;
 
     head = insert_begin(head, 100);
 
     head = insert_end(head, 55);
+
+    head = insert_end(head, 7);
+
+    head = erase(head, 7);
     
     print(head);
 

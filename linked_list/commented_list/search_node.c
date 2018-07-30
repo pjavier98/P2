@@ -17,6 +17,21 @@ void print(node *head)
     }   
 }
 
+node* search(node *head, int value)
+{
+    while (head != NULL)
+    {
+        if (head -> value == value)
+        {
+            return head;
+        }
+
+        head = head -> next;
+    }
+
+    return NULL;
+}
+
 node* insert_end(node *head, int item) 
 {
     node *head = head;
@@ -52,21 +67,17 @@ node* insert_begin(node *head, int item)
     return new_node;
 }
 
-node *linked_list()
-{
-    return NULL;
-} 
-
 int main()
 {
-    node *head = linked_list();
+    node *head = NULL;
 
     head = insert_begin(head, 100);
 
     head = insert_end(head, 55);
     
+    head = search(head, 55);
+
     print(head);
 
     return 0;
 }
-
