@@ -76,3 +76,7 @@ typedef struct node
 } node;
 
 ```
+
+## Implementações para fazer lista:
+1. Criando nodes !!
+2. Criando lista !!
