@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct linked_list  // definir lista
-{
-	struct linked_list *front;
-	struct linked_list *back;
-	int size;
-} linked_list;
-
 typedef struct node // definir node
 {
 	int value;
@@ -159,15 +152,6 @@ node *linked_list_node() // cria lista atraves de nodes
 int is_empty(node *head) // verifica se a lista esta vazia
 {
 	return (head == NULL);
-}
-
-linked_list* create_linked_list() // criar nova lista
-{
-	linked_list* list = (linked_list*) malloc(sizeof(linked_list));
-	list -> size = 0;
-	list -> front = NULL;
-	list -> back = NULL;
-	return list;
 }
 
 int main()
