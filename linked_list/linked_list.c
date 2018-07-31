@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct linked_list_  // definir lista
+/*typedef struct linked_list  // definir lista
 {
-    Node *front;
-    Node *back;
+    node *front;
+    node *back;
     int size;
 } linked_list;
-
+*/
 typedef struct node // definir node
 {
     int value;
     struct node *next;
 } node;
 
-linkedlist* create_linked_list() // criar nova lista
+/*linkedlist* create_linked_list() // criar nova lista
 {
     linkedlist* list = (linkedlist*) malloc(sizeof(linkedlist));
     list->size = 0;
     list->front = NULL;
     list->back = NULL;
     return list;
-}
+}*/
 
 node *create_node(int item) // criar node
 {
@@ -86,6 +86,46 @@ node* search(node *head, int value)
     return NULL;
 }
 
+node *order_insert(node *head, int item)
+{
+    node *previous = NULL;
+    node *current = head;
+    node *new_node = create_node(item);
+
+    if (head == NULL) // verifica se a lista nao tem nodes
+    {
+        return new_node;
+    }
+
+    if (head -> value >= item) // verifica se tem so um unico node na lista
+    {
+        new_node -> next = head;
+
+        return new_node;
+    }
+
+    while (current != NULL && current -> value <= item) // 
+    {
+        previous = current;
+        current = current -> next;
+    }
+    
+    if (previous -> next == NULL) // verifica ate o ultimo item
+    {
+        previous -> next = new_node;
+        new_node -> next = NULL;
+    }
+
+    else 
+    {
+        previous -> next = new_node;
+
+        new_node -> next = current;
+    }
+
+    return head;
+}
+
 node* insert_end(node *head, int item) 
 {
     node *new_node = create_node(item); 
@@ -132,7 +172,7 @@ int main()
 {
     //node *head = linked_list();
 
-    //head = insert_begin(head, 100);
+    //head = insert_begin(head, 15);
 
     //head = insert_end(head, 55);
     
@@ -140,10 +180,11 @@ int main()
 
     //head = search(head, 55);
 
+    //head = order_insert(head, 1);
+
     //is_empty(node *head);
     
     //print(head);
 
     return 0;
 }
-
