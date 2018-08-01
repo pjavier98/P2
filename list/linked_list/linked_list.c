@@ -17,14 +17,12 @@ node *create_node(int item) // criar node
 
 void print(node *head) // printar a lista
 {
-	while (head != NULL)
+	if (head != NULL)
 	{
 		printf("%d ", head -> value);
 
-		head = head -> next;
+		print(head -> next);
 	}   
-
-	printf("\n");
 }
 
 node* erase(node *head, int item) // apagar node
@@ -168,12 +166,11 @@ int main()
 
 	// head = search(head, 55);
 
-	// for (int i = 0; i < 10; i += 1)
+	// for (int i = 0; i < 5; i += 1)
 	// {	
 	// 	int value;
 	// 	scanf("%d", &value);
 	// 	head = order_insert(head, value);
-	// 	print(head);
 	// }
 
 	// print(head);

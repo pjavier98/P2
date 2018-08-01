@@ -68,15 +68,26 @@ Achar o primeiro nó e ele não vai ser mais o primeiro.
 
 ### Para tirar as structs dos nodes:
 ```
-
 typedef struct node
 {
 	int value;
 	struct node *next;
 } node;
-
 ```
 
-## Implementações para fazer lista:
-1. Criando nodes !!
-2. Criando lista !!
+## Efficiency:
+
+Linked List versus Array:
+
+1. Get:
+- Array = O(1)
+- Linked List = O(n)
+
+2. Insert
+- Array = O(n)
+- Linked List = O(1)
+
+What can we conclude?
+```
+Cada estrutura tem vantagens e desvantagens.
+```
