@@ -25,7 +25,7 @@ void print(node *head) // printar a lista
 	}   
 }
 
-node* erase(node *head, int item) // apagar node
+node* erase_node(node *head, int item) // apagar node
 {
     node *previous = NULL;      // anterior
     node *current = head;       // atual
@@ -162,7 +162,7 @@ int main()
 
 	// head = insert_end(head, 55);
 
-	// head = erase(head, 7);
+	// head = erase_node(head, 7);
 
 	// head = search(head, 55);
 
