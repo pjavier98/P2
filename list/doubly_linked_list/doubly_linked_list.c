@@ -125,7 +125,7 @@ node *order_insert(node *head, int item) // inserir ordenadamente
     return head;
 }
 
-node* insert_end(node *head, int item) // inserir no final da heada
+node* insert_end(node *head, int item) // inserir no final da lista
 {
 	node *new_node = create_node(item); 
 	new_node -> value = item;
@@ -149,7 +149,7 @@ node* insert_end(node *head, int item) // inserir no final da heada
 
 }
 
-node *insert_begin(node *head, int item) // inserir no começo da heada
+node *insert_begin(node *head, int item) // inserir no começo da lista
 {
 	node *new_node = create_node(item); 
 	new_node -> value = item;
