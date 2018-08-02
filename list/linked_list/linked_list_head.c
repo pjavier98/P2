@@ -112,25 +112,25 @@ node *order_insert(node *head, int item) // inserir ordenadamente
 
 node* insert_end(node *head, int item) // inserir no final da lista
 {
-	node *new_node = create_node(item); 
-	new_node -> value = item;
-	new_node -> next = NULL;
+    node *new_node = create_node(item); 
+    node *aux = head; // para nao perder a referencia do ponteiro
+    
+    if (head != NULL)
+    {
+        while (head -> next != NULL)
+        {
+            head = head -> next;
+        }
 
-	if (head != NULL)
-	{
-		while (head -> next != NULL)
-		{
-			head = head -> next;
-		}
+        head -> next = new_node;
 
-		head -> next = new_node;
+        return aux;
+    }
 
-		return head;
-	}
-	else
-	{
-		return new_node;
-	}
+    else
+    {
+        return new_node;
+    }
 
 }
 

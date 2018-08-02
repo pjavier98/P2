@@ -147,8 +147,7 @@ node *order_insert(node *head, int item) // inserir ordenadamente
 node* insert_back(node *head, int item) // inserir no final da lista
 {
 	node *new_node = create_node(item); 
-	new_node -> value = item;
-	new_node -> next = NULL;
+	node *aux = head;
 
 	if (head != NULL)
 	{
@@ -159,7 +158,7 @@ node* insert_back(node *head, int item) // inserir no final da lista
 
 		head -> next = new_node;
 
-		return head;
+		return aux;
 	}
 	else
 	{
