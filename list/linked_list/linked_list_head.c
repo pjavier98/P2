@@ -88,7 +88,7 @@ node *order_insert(node *head, int item) // inserir ordenadamente
     	return new_node;
     }
 
-    while (current != NULL && current -> value <= item) // 
+    while (current != NULL && current -> value < item) // 
     {
     	previous = current;
     	current = current -> next;
@@ -156,7 +156,7 @@ int main()
 {
 	// is_empty(node *head);
 
-	// node *head = linked_list_node();
+	node *head = linked_list_node();
 
 	// head = insert_begin(head, 15);
 
@@ -166,14 +166,15 @@ int main()
 
 	// head = search(head, 55);
 
-	// for (int i = 0; i < 5; i += 1)
-	// {	
-	// 	int value;
-	// 	scanf("%d", &value);
-	// 	head = order_insert(head, value);
-	// }
+	for (int i = 0; i < 4; i += 1)
+	{	
+		int value;
+		scanf("%d", &value);
+		head = order_insert(head, value);
+	}
 
-	// print(head);
+	print(head);
+    printf("\n");
 
 	return 0;
 }
