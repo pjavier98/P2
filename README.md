@@ -1,2 +1,2 @@
 # P2
-Questoes de Estrutura de Dados (P2)
+Estruturas de Dados (P2)
