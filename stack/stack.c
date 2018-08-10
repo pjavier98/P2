@@ -19,7 +19,7 @@ stack *create_stack()
 	return new_stack;
 }
 
-int is_empty(stack *stack)
+int is_empty(node *head)
 {
 	return (head == NULL);
 }
@@ -39,7 +39,8 @@ node *pop(stack *stack)	//remove an element
 		node *new_node = stack -> top;
 		stack -> top = stack -> top -> next;
 		new_node -> next = NULL;
-		return new_node;
+		free(new_node);
+		return top;
 	}
 }	
 
