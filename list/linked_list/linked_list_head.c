@@ -50,7 +50,7 @@ void print(node *head) // printa a lista
 		printf("\n");
 		return;
 	}
-	printf("%d ", head->value);
+	printf("%d", head->value);
 	print(head->next); // recursao para incrementar o head
 }
 
