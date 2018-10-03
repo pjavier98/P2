@@ -24,7 +24,7 @@ node *create_node(char letra) // criar node
 stack *create_stack()
 {
     stack *new_stack = (stack*) malloc(sizeof(stack));
-    new_stack -> top = NULL;
+    new_stack->top = NULL;
     return new_stack;
 }
 
@@ -54,8 +54,8 @@ int pop(stack *stack) //remove an element
     if (!is_empty(stack)) 
     {
         node *new_node = stack->top;
-        stack -> top = stack->top->next;
-        new_node -> next = NULL;
+        stack->top = stack->top->next;
+        new_node->next = NULL;
         free(new_node);
         return 1;
     }
